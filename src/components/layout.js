@@ -29,9 +29,11 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <h3
+      <h1
         style={{
-          fontFamily: `Montserrat, sans-serif`,
+        //   fontFamily: `Montserrat, sans-serif`,
+          //...scale(1.5),
+          marginBottom: rhythm(1.5),
           marginTop: 0,
         }}
       >
@@ -44,7 +46,7 @@ const Layout = ({ location, title, children }) => {
         >
           {title}
         </Link>
-      </h3>
+      </h1>
     )
   }
   return (

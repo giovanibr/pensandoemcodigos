@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Pensando em Códigos`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Giovani Racca`,
+      summary: `estudando javascript, typescript, nodejs, kotlin e spring.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Um espaço onde vou consolidando novos conhecimentos em programação ;)`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `giovanibr`,
     },
   },
   plugins: [
@@ -60,13 +60,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Pensando em Códigos - Blog por Giovani Racca`,
+        short_name: `Pensando em Códigos`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/favicon-32x32.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
