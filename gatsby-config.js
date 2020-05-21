@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/pensandoemcodigos`,
   siteMetadata: {
     title: `Pensando em Códigos`,
     author: {
@@ -6,7 +7,7 @@ module.exports = {
       summary: `estudando javascript, typescript, nodejs, kotlin e spring.`,
     },
     description: `Um espaço onde vou consolidando novos conhecimentos em programação ;)`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://giovanibr.github.io/pensandoemcodigos/`,
     social: {
       twitter: `giovanibr`,
     },
@@ -53,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-53336905-3`,
       },
     },
     `gatsby-plugin-feed`,
