@@ -1,54 +1,159 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Pensando em Códigos]]></title><description><![CDATA[Um espaço onde vou consolidando novos conhecimentos em programação ;)]]></description><link>http://pensandoemcodigos.net</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 May 2020 14:11:21 GMT</lastBuildDate><item><title><![CDATA[Funções em Javascript: entidades de primeira classe]]></title><description><![CDATA[Em linguagens de programação, define-se uma entidade de primeira classe (first-class citizens) como a entidade em que é permitido realizar…]]></description><link>http://pensandoemcodigos.net/2020-05-18-funcoes-em-js/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020-05-18-funcoes-em-js/</guid><pubDate>Mon, 18 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Em linguagens de programação, define-se uma entidade de primeira classe (&lt;a href=&quot;https://en.wikipedia.org/wiki/First-class_citizen&quot;&gt;first-class citizens&lt;/a&gt;) como a entidade em que é permitido realizar qualquer operação oferecida por aquela linguagem.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Pensando em Códigos]]></title><description><![CDATA[Um espaço onde vou consolidando novos conhecimentos em programação ;)]]></description><link>http://pensandoemcodigos.net</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Jun 2020 21:47:42 GMT</lastBuildDate><item><title><![CDATA[Implementando filas de tarefas com Bull]]></title><description><![CDATA[Um tutorial passando pelos pontos básicos da utilização da biblioteca Bull para gerenciar filas de tarefas assíncronas em aplicações NodeJs…]]></description><link>http://pensandoemcodigos.net/2020/05/31/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/05/31/</guid><pubDate>Sun, 31 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Um tutorial passando pelos pontos básicos da utilização da biblioteca &lt;a href=&quot;https://github.com/OptimalBits/bull&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Bull&lt;/a&gt; para gerenciar filas de tarefas assíncronas em aplicações &lt;a href=&quot;https://nodejs.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;NodeJs&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;O que é Bull?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/OptimalBits/bull&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Bull&lt;/a&gt; é uma biblioteca NodeJS que implementa um rápido e confiável gerenciador de filas de tarefas (&lt;em&gt;job&lt;/em&gt;).&lt;/p&gt;
+&lt;h4&gt;Filas&lt;/h4&gt;
+&lt;p&gt;Fila é uma estrutura de dados muito utilizada no desenvolvimento de aplicações e é definida de forma simples como: o primeiro elemento que entra na fila é o primeiro que sai. O termo que utilizamos em inglês para esse algoritmo é &lt;a href=&quot;https://pt.wikipedia.org/wiki/FIFO&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;FIFO&lt;/a&gt; (&lt;em&gt;first In, first out&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Filas de tarefas assíncronas são muito utilizadas em arquiteturas de sistemas como forma de delegar tarefas para outros processos e liberar a execução do processo principal. Em aplicações web, o cliente fica aguardando uma requisição http e o servidor pode utilizar uma fila de tarefas para responder a requisição, delegando tarefas demoradas, como envio de emails, para outros sistemas que irão consumir as tarefas da fila.&lt;/p&gt;
+&lt;!-- Vantagem do uso de filas: processamento assíncrono, paralelismo, falhas... --&gt;
+&lt;h4&gt;Redis&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://redis.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Redis&lt;/a&gt; é um banco de dados &lt;em&gt;NoSQL&lt;/em&gt; muito popular e performático que armazena os dados numa estrutura chave-valor. O Bull utiliza Redis como infraestrutura para controlar e persistir as filas. Assim é necessário o endereço de uma instância Redis no ar.&lt;/p&gt;
+&lt;p&gt;Não é necessário entender como Bull usa e persiste as filas no Redis, tudo fica abstraído.&lt;/p&gt;
+&lt;h2&gt;Tutorial&lt;/h2&gt;
+&lt;p&gt;Nesse tutorial, vamos ver os pontos fundamentais do código relativos ao uso do Bull. Para ver a aplicação completa, veja o projeto &lt;a href=&quot;https://github.com/giovanibr/bull-demo&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;bull-demo&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Criação da fila&lt;/h4&gt;
+&lt;p&gt;O primeiro passo é criar a própria fila de tarefas.&lt;/p&gt;
+&lt;p&gt;Importe a biblioteca e instancie uma nova fila passando nos parâmetros o endereço do seu servidor Redis. O construtor &lt;strong&gt;Queue&lt;/strong&gt; aceita muitos parâmetros opcionais para customizar o comportamento da fila. Para mais detalhes, veja &lt;a href=&quot;https://github.com/OptimalBits/bull/blob/develop/REFERENCE.md#queue&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;REFERENCE.md#queue&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const Queue = require(&apos;bull&apos;);
+
+const minhaFila = new Queue(&apos;minhaFila&apos;, {
+    redis: {
+        host: &quot;127.0.0.1&quot;,
+        port: &quot;6379&quot;
+    },
+    prefix: &apos;bulldemo&apos;;
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Adicionando trabalhos a fila&lt;/h4&gt;
+&lt;p&gt;O segundo passo é definir a inclusão da tarefa na fila. &lt;/p&gt;
+&lt;p&gt;A fila criada tem um método &lt;strong&gt;queue.add()&lt;/strong&gt; para adicionar tarefas. Esse método recebe um objeto específico de negócio (um email a ser enviado ou um lote a ser processado por exemplo) e também pode receber opções onde é possível programar o comportamento da tarefa na fila como tempo de espera, um numero de tentativas no caso de erro, etc. Para ver mais opções, consultar &lt;a href=&quot;https://github.com/OptimalBits/bull/blob/develop/REFERENCE.md#queueadd&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;REFERENCE.md#queueadd&lt;/a&gt;. &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const options = {
+    delay: 10000, // 10 seg in ms
+    attempts: 5,
+};
+
+const dadosJob = {
+    &quot;numero&quot;: 12345
+};
+
+minhaFila.add(dadosJob, options);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Definição do consumidor&lt;/h4&gt;
+&lt;p&gt;O terceiro passo é definir quem vai tratar as tarefas da fila.&lt;/p&gt;
+&lt;p&gt;O consumidor é definido por uma função que vai ser chamada toda vez que uma tarefa for retirada da fila de acordo com as configurações. Essa função recebe como parâmetros a tarefa &lt;strong&gt;job&lt;/strong&gt;, e o &lt;em&gt;callback&lt;/em&gt; opcional &lt;strong&gt;done&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A instancia da tarefa contêm todos os dados relativos a sua execução. Os dados que foram passados na criação da tarefa podem ser acessados pela propriedade &lt;strong&gt;job.data&lt;/strong&gt;. Para ver todas as propriedades e métodos do objeto, ver &lt;a href=&quot;https://github.com/OptimalBits/bull/blob/develop/REFERENCE.md#job&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;REFERENCE.md#job&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O &lt;em&gt;callback&lt;/em&gt; &lt;strong&gt;done&lt;/strong&gt; permite concluir a tarefa com êxito ou com erro, dependendo do que vai ser feito com os dados passados.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;function (job, done) {
+    //progresso
+    job.progress(100);
+
+    // chamada de sucesso 
+    done(null, &quot;Feito&quot;);
+
+    // ou chamada de erro
+    done(new Error(&apos;Deu erro!&apos;));
+
+    // ou erro não tratado, Bull reage do msm jeito
+    throw new Error(&apos;Erro inesperado&apos;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A função também pode trabalhar com &lt;em&gt;promisses&lt;/em&gt; ao invés do &lt;em&gt;callback&lt;/em&gt;. &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;function (job) {
+    return new Promise(function(resolve, reject) {
+        // sucesso 
+        //resolve(&quot;Feito&quot;);
+
+        // erro
+        reject(new Error(&apos;Deu erro!&apos;));
+
+        erro não tratado, Bull reage do msm jeito
+        throw new Error(&apos;Erro inesperado&apos;);
+    });
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Definição dos &lt;em&gt;event listeners&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;O último passo é definir callbacks para os eventos da fila.&lt;/p&gt;
+&lt;p&gt;A fila emite eventos que são muito úteis. Podemos programar ações para cada etapa no ciclo de vida da tarefa (esperando, ativa, finalizada). Podemos também definir o que vai ser feito no caso de erro. &lt;/p&gt;
+&lt;p&gt;Para uma lista com todos os eventos, consultar &lt;a href=&quot;https://github.com/OptimalBits/bull/blob/develop/REFERENCE.md#events&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;REFERENCE.md#events&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;//   caminho feliz [waiting, active, completed]
+minhaFila.on(&apos;waiting&apos;, job =&gt; {
+    console.log(&apos;Job recebido!&apos;);
+});
+
+minhaFila.on(&apos;active&apos;, function(job, jobPromise){
+    console.log(`Job começou`);
+})
+
+minhaFila.on(&apos;completed&apos;, function(job, result) {
+    console.log(`${result}, job finalizado com sucesso`);
+    // remove job da fila
+    job.remove();
+});
+
+minhaFila.on(&apos;failed&apos;, function(job, error){
+    console.log(`Job falhou`, error);
+    // retry
+    job.retry();
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Projeto Demo&lt;/h2&gt;
+&lt;p&gt;O projeto &lt;a href=&quot;https://github.com/giovanibr/bull-demo&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;bull-demo&lt;/a&gt; está funcional e imprime no console todos as etapas do ciclo de vida da tarefa. Ele é uma aplicação NodeJS básica com &lt;a href=&quot;https://expressjs.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Express&lt;/a&gt; com um endpoint POST, que recebe os dados da tarefa e coloca na fila.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Funções em Javascript: entidades de primeira classe]]></title><description><![CDATA[Em linguagens de programação, define-se uma entidade de primeira classe (first-class citizens) como a entidade em que é permitido realizar…]]></description><link>http://pensandoemcodigos.net/2020/05/18/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/05/18/</guid><pubDate>Mon, 18 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Em linguagens de programação, define-se uma entidade de primeira classe (&lt;a href=&quot;https://en.wikipedia.org/wiki/First-class_citizen&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;first-class citizens&lt;/a&gt;) como a entidade em que é permitido realizar qualquer operação oferecida por aquela linguagem.&lt;/p&gt;
 &lt;p&gt;Em Javascript, funções são entidades de primeira classe. &lt;/p&gt;
 &lt;!-- Com elas é possível: --&gt;
 &lt;p&gt;Suponha a função declarada abaixo:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// declaração&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;minhaFn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;minhaFn executou&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// declaração
+function minhaFn() {
+    console.log(&apos;minhaFn executou&apos;);
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Em javascript é possível atribuí-la a uma variável, um atributo ou guardá-la em um array:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// atribuição&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; minhaVar &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; minhaFn&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// atribuindo a um atributo&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; meuObj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; meuAtrib &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; minhaFn &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// declarando e colocando num array ao mesmo tempo&lt;/span&gt;
-arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;minhaFn executou&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// atribuição
+let minhaVar = minhaFn;
+// atribuindo a um atributo
+let meuObj = { meuAtrib : minhaFn }
+// declarando e colocando num array ao mesmo tempo
+arr.push(function(){console.log(&apos;minhaFn executou&apos;);})
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Dessa forma, minhaFn pode ser executada tanto pelo nome original como pelas variáveis:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;minhaFn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// ou&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;minhaVar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// ou&lt;/span&gt;
-meuObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;meuAtrib&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;minhaFn();
+// ou
+minhaVar();
+// ou
+meuObj.meuAtrib();
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;Em javascript também podemos passar uma função como parâmetro de outra função e também podemos retornar uma função como resposta:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;executaFuncao&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; fn&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;function executaFuncao(fn) {
+    fn();
+    return fn;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Esse recurso é poderoso, e é por isso que conseguimos fazer coisas mais sofisticadas em javascript como no exemplo:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// array de pessoas&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; pessoas &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;nome&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Antônio&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; idade&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;nome&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;José&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; idade&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;nome&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Maria&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; idade&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// define uma função de comparação&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;comparePor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;prop&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;prop&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-            y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;prop&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// ordena por nome usando a função retornada por comparePor()&lt;/span&gt;
-pessoas&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;comparePor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;nome&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;// array de pessoas
+let pessoas = [
+    {nome: &apos;Antônio&apos;, idade: 25},
+    {nome: &apos;José&apos;, idade: 51},
+    {nome: &apos;Maria&apos;, idade: 38}
+];
+// define uma função de comparação
+function comparePor(prop) {
+    return function (a, b) {
+        let x = a[prop],
+            y = b[prop];
+        if (x &gt; y) {
+            return 1;
+        } else if (x &amp;#x3C; y) {
+            return -1
+        } else {
+            return 0;
+        }
+    }
+}
+// ordena por nome usando a função retornada por comparePor()
+pessoas.sort(comparePor(&apos;nome&apos;));
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;Por último, podemos mencionar que podemos usar funções com operadores condicionais, como if por exemplo:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; teste &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fn1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fn2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;let teste = (fn1() === fn2());
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt; &lt;/p&gt;</content:encoded></item></channel></rss>
