@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/pensandoemcodigos`,
+  // pathPrefix: `/pensandoemcodigos`,
   siteMetadata: {
     title: `Pensando em Códigos`,
     author: {
@@ -7,7 +7,7 @@ module.exports = {
       summary: `estudando javascript, typescript, nodejs, kotlin e spring.`,
     },
     description: `Um espaço onde vou consolidando novos conhecimentos em programação ;)`,
-    siteUrl: `https://giovanibr.github.io/pensandoemcodigos/`,
+    siteUrl: `http://pensandoemcodigos.net/`,
     social: {
       twitter: `giovanibr`,
     },
@@ -46,6 +46,20 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+              plugins: [
+              {
+                resolve: "gatsby-remark-external-links",
+                options: {
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                }
+              }
+              ]
+            }
+          },
         ],
       },
     },
