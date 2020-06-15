@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,6 +11,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+
+  const disqusConfig = {
+    url: `https://pensandoemcodigos.net${location.pathname}index.html`,
+    identifier: post.id,
+    title: post.frontmatter.title,
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -25,17 +32,23 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: 0,
             }}
           >
-            {post.frontmatter.title}
+            {post.frontmatter.title} 
           </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
+          
+            <p
+              style={{
+                ...scale(-1 / 5),
+                display: `block`,
+                marginBottom: rhythm(1),
+              }}
+            >
+              {post.frontmatter.date} &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+              <CommentCount config={disqusConfig} placeholder={'...'} />
+            </p>
+            
+          
+          
+          
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -46,6 +59,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <footer>
           <Bio />
         </footer>
+        
       </article>
 
       <nav>
@@ -74,6 +88,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
+      <div>
+        <Disqus config={disqusConfig} />
+      </div>
     </Layout>
   )
 }
@@ -93,7 +110,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD/MM/YY")
         description
       }
     }

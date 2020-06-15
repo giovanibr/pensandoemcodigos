@@ -4,6 +4,8 @@ date: "2020-05-18"
 description: "Em Javascript, funções são entidades de primeira classe. O que são entidades de primeira classe? E o que isso significa na prática?"
 ---
 
+![js](js.png)
+
 Em linguagens de programação, define-se uma entidade de primeira classe ([first-class citizens](https://en.wikipedia.org/wiki/First-class_citizen)) como a entidade em que é permitido realizar qualquer operação oferecida por aquela linguagem.
 
 Em Javascript, funções são entidades de primeira classe. 

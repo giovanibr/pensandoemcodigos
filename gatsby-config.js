@@ -4,7 +4,7 @@ module.exports = {
     title: `Pensando em Códigos`,
     author: {
       name: `Giovani Racca`,
-      summary: `estudando javascript, typescript, nodejs, kotlin e spring.`,
+      summary: `brincando com Gatsby e estudando javascript, typescript, nodejs, kotlin e spring.`,
     },
     description: `Um espaço onde vou consolidando novos conhecimentos em programação ;)`,
     siteUrl: `http://pensandoemcodigos.net/`,
@@ -13,6 +13,8 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -47,24 +49,15 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
-            resolve: `gatsby-transformer-remark`,
+            resolve: "gatsby-remark-external-links",
             options: {
-              plugins: [
-              {
-                resolve: "gatsby-remark-external-links",
-                options: {
-                  target: "_blank",
-                  rel: "noopener noreferrer"
-                }
-              }
-              ]
+              target: "_blank",
+              // rel: "noopener noreferrer"
             }
           },
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -90,6 +83,12 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `pensandoemcodigos`
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

@@ -65,7 +65,7 @@ const Bio = () => {
       />
       <p>
         Por <strong>{author.name}</strong>
-        {' ' + author.summary}
+        {', ' + author.summary}
         {/* <a href={social.twitter}>
             <Icon name="twitter" />
           </a>

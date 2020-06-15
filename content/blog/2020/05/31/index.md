@@ -1,8 +1,12 @@
 ---
 title: "Implementando filas de tarefas com Bull"
 date: "2020-05-31"
-description: "Como gerenciar filas assíncronas em projetos NodeJS com Bull."
+description: "Gerenciando filas assíncronas em projetos NodeJS com Bull."
 ---
+
+![bull](bull.png)
+
+&nbsp;
 
 Um tutorial passando pelos pontos básicos da utilização da biblioteca [Bull](https://github.com/OptimalBits/bull) para gerenciar filas de tarefas assíncronas em aplicações [NodeJs](https://nodejs.org/).
 
