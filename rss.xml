@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Pensando em Códigos]]></title><description><![CDATA[Um espaço onde vou consolidando novos conhecimentos em programação ;)]]></description><link>http://pensandoemcodigos.net</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 21 Jun 2020 21:56:19 GMT</lastBuildDate><item><title><![CDATA[Leituras mais interessantes da semana]]></title><description><![CDATA[How a Chinese AI Giant Made Chatting—and Surveillance—Easy (Wired) A incrível história da empresa chinesa de tecnologia de reconhecimento de…]]></description><link>http://pensandoemcodigos.net/2020/06/21/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/06/21/</guid><pubDate>Sun, 21 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://www.wired.com/story/iflytek-china-ai-giant-voice-chatting-surveillance/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;How a Chinese AI Giant Made Chatting—and Surveillance—Easy (Wired)&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Pensando em Códigos]]></title><description><![CDATA[Um espaço onde vou consolidando novos conhecimentos em programação ;)]]></description><link>http://pensandoemcodigos.net</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 25 Jun 2020 17:36:11 GMT</lastBuildDate><item><title><![CDATA[O que é o Deno?]]></title><description><![CDATA[O que é Deno? Deno é o novo projeto do criador do NodeJs. Ryan Dahl vem desde o fim de 2018 trabalhando nesse novo runtime para javascript e…]]></description><link>http://pensandoemcodigos.net/2020/06/25/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/06/25/</guid><pubDate>Thu, 25 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e245c027e857e6c66745f4db657ddf76/21b4d/deno.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0ElEQVQ4y5WVTShEURTHZ3xOyscsRLJhI2Jla2tnI7G0VHZ2IrJQirVsrCgUKQkLssD4yEZmykdDM8woM418E2N6/qf+T6fXe2bm1q/33p1zz/mfc8+943I5jxyQazMvc25XFsNNZ9pxESi0cZx2aEctYAocggC4AGtgGFSr4GmdiZpZ8AwM8A6CIEWnMvcC+tKlKaMEHHPRGbgBO+AUXINVEAVx8AXGnZSaE3NUlKKDPXDAtPfBFbhlsAAD91hrar50gTuwThXiMEYl51z8AHycC4Mk1Xq1MFPdCvBzsa6Vj0E+ORfm76I24aRSahcBu+CRhhKgCRQwaAVYpoMjcMmnfM9bu6QWvIIQN2IE5IF6UGqp9wn4Zkn8VLpl3ZQaGj3RsM6mEzx8dlPVB8sgAjatxsUseJwOt0EbaAbtoB9U0baRm2LwGWXf/qVsboqcgh9wT+M31dwDKngZMzEoQOx79aaYO9NBoxj7MKkWDioFHtWDQWZU6dTgGzRMUG2I32NKgYfZGE4toz17VfQI+1DeRy2BFzg/mcnlIG2ypNI12EYuptbJoEM2gv69vlrBNE+OnOkZsAgmQEMmzrSB23KRSinKQX62F6xVbU62fwG/rYiSN2Scl0oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;deno&quot;
+        title=&quot;deno&quot;
+        src=&quot;/static/e245c027e857e6c66745f4db657ddf76/fcda8/deno.png&quot;
+        srcset=&quot;/static/e245c027e857e6c66745f4db657ddf76/12f09/deno.png 148w,
+/static/e245c027e857e6c66745f4db657ddf76/e4a3f/deno.png 295w,
+/static/e245c027e857e6c66745f4db657ddf76/fcda8/deno.png 590w,
+/static/e245c027e857e6c66745f4db657ddf76/efc66/deno.png 885w,
+/static/e245c027e857e6c66745f4db657ddf76/c83ae/deno.png 1180w,
+/static/e245c027e857e6c66745f4db657ddf76/21b4d/deno.png 1280w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;O que é Deno?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://deno.land/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Deno&lt;/a&gt; é o novo projeto do criador do &lt;a href=&quot;https://nodejs.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;NodeJs&lt;/a&gt;. &lt;a href=&quot;https://en.wikipedia.org/wiki/Ryan_Dahl&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Ryan Dahl&lt;/a&gt; vem desde o fim de 2018 trabalhando nesse novo &lt;em&gt;runtime&lt;/em&gt; para &lt;strong&gt;javascript&lt;/strong&gt; e &lt;strong&gt;typescript&lt;/strong&gt;, que muitos apontam como o possível sucessor do Node.&lt;/p&gt;
+&lt;h2&gt;Motivação&lt;/h2&gt;
+&lt;p&gt;NodeJs é um projeto lançado em 2009, quando o universo do Javascript era bem diferente. A linguagem javascript mudou muito de lá pra cá, como com a criação de &lt;em&gt;promisses&lt;/em&gt; e &lt;em&gt;async/await&lt;/em&gt;. &lt;a href=&quot;https://pt.wikipedia.org/wiki/TypeScript&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Typescript&lt;/a&gt; então só surgiu em 2012.&lt;/p&gt;
+&lt;p&gt;Com novas tecnologias e o avanço de linguagens de programação somadas a experiencia conquistada durante anos no projeto NodeJs, é natural que existam arrependimentos, mesmo num projeto de indiscutível sucesso.&lt;/p&gt;
+&lt;p&gt;Em junho de 2018 Ryan Dahl deu uma &lt;a href=&quot;https://www.youtube.com/watch?v=M3BM9TB-8yA&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;palestra&lt;/a&gt; onde relatava coisas que ele gostaria de ter feito diferente no NodeJs.&lt;/p&gt;
+&lt;h2&gt;Características&lt;/h2&gt;
+&lt;p&gt;A &lt;a href=&quot;https://deno.land/v1&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;versão 1.0&lt;/a&gt; do novo &lt;em&gt;runtime&lt;/em&gt; foi lançada em maio. Abaixo destaco alguns pontos.&lt;/p&gt;
+&lt;h3&gt;&lt;em&gt;Core&lt;/em&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Deno foi escrito em &lt;strong&gt;Rust&lt;/strong&gt;, Node em C++&lt;/li&gt;
+&lt;li&gt;Deno usa o &lt;em&gt;event loop&lt;/em&gt; &lt;strong&gt;Tokyo&lt;/strong&gt;, desenvolvido em Rust&lt;/li&gt;
+&lt;li&gt;Deno suporta &lt;strong&gt;Typescript&lt;/strong&gt; nativamente&lt;/li&gt;
+&lt;li&gt;Deno usa &lt;strong&gt;V8&lt;/strong&gt; como runtime, assim como Node&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Segurança&lt;/h3&gt;
+&lt;p&gt;Uma das características mais importantes no Deno foi a segurança. Ao contrário do Node, o código Deno executa em uma &lt;strong&gt;&lt;em&gt;sandbox&lt;/em&gt;&lt;/strong&gt;, ou seja, em tempo de execução o programa não tem acesso aos recursos da máquina.&lt;/p&gt;
+&lt;p&gt;É necessário dar permissão para que o programa escrito em Deno tenha acesso ao sistema de arquivos, à rede, às variáveis de ambiente e permissão para executar programas externos. Ao tentar acessar um dos recursos, o sistema pedirá permissão desde que uma da seguintes flags não tenha sido utilizada ao executar o programa:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;para o sistema de arquivos, &lt;strong&gt;—allow-write&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;para rede, &lt;strong&gt;—allow-net&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;para as variáveis de ambiente, &lt;strong&gt;—allow-env&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;para executar programas externos, &lt;strong&gt;—allow-run&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Modules&lt;/h3&gt;
+&lt;p&gt;Deno importa bibliotecas por URLs. Isso permite que os programas sejam distribuídos sem a necessidade de um repositório central de programas, como npm, maven, etc. Ou seja, com Deno, não temos mais &lt;strong&gt;npm&lt;/strong&gt; nem &lt;strong&gt;node_modules&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Quando a aplicação é inicializada, o &lt;em&gt;runtime&lt;/em&gt; daz download de todas as bibliotecas utilizadas.
+As bibliotecas baixadas são colocadas em um &lt;strong&gt;cache&lt;/strong&gt; para agilizar as proximas execuções. Para forçar um novo download, foi criada a flag &lt;strong&gt;—reload&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Assincronismo&lt;/h3&gt;
+&lt;p&gt;A promessa é de que com Deno seja mais fácil trabalhar com código assíncrono, já que a sua implementação foi pensada com isso em mente, ao contrário do node.&lt;/p&gt;
+&lt;h2&gt;Limitações&lt;/h2&gt;
+&lt;p&gt;A publicação da versão 1.0 deixa claro que existem limitações de uso para projetos que necessitam de soluções mais maduras.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comparado com Node, a performance de processamento HTTP pode ser inferior.&lt;/li&gt;
+&lt;li&gt;A performance do compilador pode ser outro gargalo, já que o Deno utiliza o compilador de Typescript da Microsoft. Um novo compilador escrito em Rust está nos objetivos futuros.&lt;/li&gt;
+&lt;li&gt;Ainda está em desenvolvimento uma interface para criação de extensões.&lt;/li&gt;
+&lt;li&gt;Apesar de serem escritos em javascript, os pacotes escritos para Node ainda não são totalmente compatíveis. Para atingir esse objetivo, uma &lt;a href=&quot;https://deno.land/std/node/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;camada de compatibilidade&lt;/a&gt; está sendo desenvolvida.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;Ainda é cedo para projetar o futuro do Deno. Ao mesmo tempo que muitos celebraram o lançamento, também houve muita controvérsia.&lt;/p&gt;
+&lt;p&gt;NodeJs tem mais de 10 anos de desenvolvimento, milhares de desenvolvedores trabalhando na sua evolução e no seu ecossistema. Não existe motivo para troca e escolhe-lo para um novo projeto critico seria um risco.&lt;/p&gt;
+&lt;p&gt;É importante acompanhar novas tecnologias e ver se elas passarão no “teste” do tempo. E mesmo que não passem, elas podem apontar novas tendencias. Por exemplo, abandonar o NPM e não usar nenhum gerenciador de bibliotecas e todas as suas vantagens, é uma mudança de impacto. Como as comunidades de desenvolvedores vão reagir e se adaptar? Qual o custo-beneficio?&lt;/p&gt;
+&lt;p&gt;Cada mudança é uma oportunidade de aprendizado. Por enquanto, vale a pena acompanhar.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Leituras mais interessantes da semana (14-21 jun)]]></title><description><![CDATA[How a Chinese AI Giant Made Chatting—and Surveillance—Easy (Wired) A incrível história da empresa chinesa de tecnologia de reconhecimento de…]]></description><link>http://pensandoemcodigos.net/2020/06/21/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/06/21/</guid><pubDate>Sun, 21 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://www.wired.com/story/iflytek-china-ai-giant-voice-chatting-surveillance/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;How a Chinese AI Giant Made Chatting—and Surveillance—Easy (Wired)&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A incrível história da empresa chinesa de tecnologia de reconhecimento de voz, iFlytek. Seu impacto no mercado dominado pela Alexa, Siri e Google Assistant, e o perigo da vigilância cada vez maior por parte do Estado e dessas empresas.&lt;/p&gt;
 &lt;h2&gt;&lt;a href=&quot;https://www.theatlantic.com/magazine/archive/2020/07/big-tech-pandemic-power-grab/612238/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;What Big Tech Wants Out of the Pandemic (The Atlantic)&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Uma análise de como as &lt;em&gt;big four&lt;/em&gt;, Google, Facebook, Apple e Amazon, podem consolidar ainda mais seus monopólios nessa pandemia.&lt;/p&gt;
