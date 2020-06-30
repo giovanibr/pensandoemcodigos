@@ -4,13 +4,21 @@ module.exports = {
     title: `Pensando em Códigos`,
     author: {
       name: `Giovani Racca`,
-      summary: `brincando com Gatsby e estudando javascript, typescript, nodejs, kotlin e spring.`,
+      summary: `confinado, brincando aqui com Gatsby e estudando javascript, typescript, nodejs, kotlin e spring.`,
     },
     description: `Um espaço onde vou consolidando novos conhecimentos em programação ;)`,
     siteUrl: `http://pensandoemcodigos.net/`,
     social: {
       twitter: `giovanibr`,
     },
+    menuLinks:[{
+      name:'home',
+      link:'/'
+    },
+    {
+      name:'resources',
+      link:'/resources'
+    }]
   },
   plugins: [
     `gatsby-plugin-sharp`,

@@ -11,6 +11,10 @@ type Data = {
   site: {
     siteMetadata: {
       title: string
+      menuLinks: {
+        name: string
+        link: string
+      }
     }
   }
   allMarkdownRemark: {
@@ -33,15 +37,17 @@ type Data = {
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const menuLinks = data.site.siteMetadata.menuLinks
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} menu={menuLinks}>
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
+        if (node.frontmatter.tag === "post") {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields.slug} style={{marginLeft: rhythm(.5)}}>
             <header>
               <h3
                 style={{
@@ -63,6 +69,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
             </section>
           </article>
         )
+              }
       })}
     </Layout>
   )
@@ -88,6 +95,7 @@ export const pageQuery = graphql`
             date(formatString: "DD/MM/YY")
             title
             description
+            tag
           }
         }
       }

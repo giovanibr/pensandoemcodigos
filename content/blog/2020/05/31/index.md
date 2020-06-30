@@ -2,6 +2,7 @@
 title: "Implementando filas de tarefas com Bull"
 date: "2020-05-31"
 description: "Gerenciando filas assíncronas em projetos NodeJS com Bull."
+tag: "post"
 ---
 
 ![bull](bull.png)

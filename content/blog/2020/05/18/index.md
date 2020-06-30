@@ -2,6 +2,7 @@
 title: "Funções em Javascript: entidades de primeira classe"
 date: "2020-05-18"
 description: "Em Javascript, funções são entidades de primeira classe. O que são entidades de primeira classe? E o que isso significa na prática?"
+tag: "post"
 ---
 
 ![js](js.png)
