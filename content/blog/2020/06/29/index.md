@@ -2,7 +2,7 @@
 title: "Leituras mais interessantes da semana (22-28 jun)"
 date: "2020-06-29"
 description: "Apple muda Mac para arquitetura ARM, Rust, \"<i>no code</i>\" na Amazon e discriminação algorítmica."
-tag: "post"
+tags: ["artigos", "arm", "no code"]
 ---
 ## [Apple, ARM, and Intel (Stratechery)](https://stratechery.com/2020/apple-arm-and-intel/) ##
 Uma análise das implicações da decisão feita pela Apple de migrar o Mac para a **arquitetura ARM**.

@@ -44,7 +44,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
-        if (node.frontmatter.tag === "post") {
+        // if (node.frontmatter.tag === "post") {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug} style={{marginLeft: rhythm(.5)}}>
@@ -69,7 +69,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
             </section>
           </article>
         )
-              }
+        //      }
       })}
     </Layout>
   )

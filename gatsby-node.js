@@ -5,10 +5,9 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // const resourcesTemplate = path.resolve(`./src/templates/resources.js`)
-  // const categoryTemplate = path.resolve("src/templates/categories.js");
-
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const tagTemplate = path.resolve("./src/templates/tags.js")
+
   const result = await graphql(
     `
       {
@@ -23,9 +22,14 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
-                tag
+                tags
               }
             }
+          }
+        }
+        tagsGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___tags) {
+            fieldValue
           }
         }
       }
@@ -44,40 +48,31 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node
     const tag = post.node.frontmatter.tag
 
-    // if(tag == "post"){
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          tag: post.node.frontmatter.tag,
-          previous,
-          next,
-        },
-      })
-    // }
-
-    
+    createPage({
+      path: post.node.fields.slug,
+      component: blogPost,
+      context: {
+        slug: post.node.fields.slug,
+        tag: post.node.frontmatter.tag,
+        previous,
+        next,
+      },
+    })    
   })
 
-  // let tags = []
-  // _.each(posts, edge => {
-  //   if (_.get(edge, "node.frontmatter.tags")) {
-  //     tags = tags.concat(edge.node.frontmatter.tags);
-  //   }
-  // });
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group
 
-  // tags = _.uniq(tags);
-
-  // tags.forEach(tag => {
-  //   createPage({
-  //     path: `/categories/${_.kebabCase(tag)}/`,
-  //     component: categoryTemplate,
-  //     context: {
-  //       tag,
-  //     },
-  //   });
-  // });
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    })
+  })
 
 }
 
