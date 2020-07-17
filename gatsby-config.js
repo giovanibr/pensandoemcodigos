@@ -6,7 +6,7 @@ module.exports = {
       name: `Giovani Racca`,
       summary: `confinado, brincando aqui com Gatsby e estudando javascript, typescript, nodejs, kotlin e spring.`,
     },
-    description: `Um espaço onde vou consolidando novos conhecimentos em programação ;)`,
+    description: `Um espaço onde vou consolidando antigos e novos conhecimentos em programação: muito javascript, typescript, nodejs, kotlin, spring, etc.`,
     siteUrl: `http://pensandoemcodigos.net/`,
     social: {
       twitter: `giovanibr`,
