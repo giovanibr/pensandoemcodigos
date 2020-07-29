@@ -1,0 +1,20 @@
+nav {
+    padding-top: 1.0875rem;
+    padding-right: 4.35rem;
+    padding-left: 1.0875rem;
+    font-family: 'Montserrat', sans-serif;
+}
+nav a {
+    /* text-decoration-skip: all; */
+}
+nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 1.45rem;
+    margin-left: 1.45rem;
+}
