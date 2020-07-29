@@ -4,7 +4,7 @@ module.exports = {
     title: `Pensando em Códigos`,
     author: {
       name: `Giovani Racca`,
-      summary: `confinado, brincando aqui com Gatsby e estudando javascript, typescript, nodejs, kotlin e spring.`,
+      summary: `confinado, brincando com Gatsby, escrevendo e estudando javascript, typescript, nodejs, kotlin e mais algumas coisas.`,
     },
     description: `Um espaço onde vou consolidando antigos e novos conhecimentos em programação: muito javascript, typescript, nodejs, kotlin, spring, etc.`,
     siteUrl: `http://pensandoemcodigos.net/`,
@@ -28,6 +28,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/readings`,
+        name: `readings`,
       },
     },
     {
