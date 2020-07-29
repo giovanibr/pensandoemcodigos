@@ -1,18 +1,19 @@
 import Typography from "typography"
-//import Wordpress2016 from "typography-theme-wordpress-2016"
+
 import doelger from "typography-theme-doelger"
+import grandViewTheme from 'typography-theme-grand-view'
 
-doelger.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  }
-}
+// doelger.overrideThemeStyles = () => {
+//   return {
+//     "a.gatsby-resp-image-link": {
+//       boxShadow: `none`,
+//     },
+//   }
+// }
 
-delete doelger.googleFonts
+delete grandViewTheme.googleFonts
 
-const typography = new Typography(doelger)
+const typography = new Typography(grandViewTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
