@@ -3,16 +3,29 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
-const Layout = ({ location, title, children, menuLinks }) => {
+import "./layout.css"
+
+const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
-  let resources
+  let nav = (
+    <nav>
+      <ol>
+        <li>
+          <Link to="/about">Sobre</Link>
+        </li>
+        <li>
+          <Link to="/readings">Leituras</Link>
+        </li>
+      </ol>          
+    </nav>
+  )
 
   if (location.pathname === rootPath) {
     header = (
       <h1
         style={{
-          ...scale(1.6),
+          ...scale(2),
           marginBottom: rhythm(1.5),
           marginTop: 0,
           // textAlign: `center`
@@ -29,30 +42,12 @@ const Layout = ({ location, title, children, menuLinks }) => {
         </Link>
       </h1>
     )
-    resources = (
-      <h4
-        style={{
-          ...scale(.3),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-          // marginLeft: rhythm(2),
-          textAlign: `left`
-        }}
-      >
-      {/* <Link style={{ boxShadow: `none`, color: `inherit`, marginLeft: rhythm(.5) }} to='/resources'>
-        Sobre
-      </Link> &nbsp;
-      <Link style={{ boxShadow: `none`, color: `inherit`, marginLeft: rhythm(1.5) }} to='/resources'>
-        Recursos
-      </Link> */}
-      </h4>
-    )
   } else {
     header = (
       <h1
         style={{
         //   fontFamily: `Montserrat, sans-serif`,
-          //...scale(1.5),
+          ...scale(1.6),
           marginBottom: rhythm(1.5),
           marginTop: 0,
         }}
@@ -70,22 +65,36 @@ const Layout = ({ location, title, children, menuLinks }) => {
     )
   }
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(28),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header>{header}</header>
-      {resources}
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Desenvolvido com
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+    <div>
+      {nav}
+
+      <div
+        style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(30),
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        }}
+      >
+
+        <header style={{
+          display: 'flex',
+          flexDirection: 'row',
+        }}>
+        
+          {header}        
+        
+        </header>
+          
+        
+        <main>{children}</main>
+        
+        <footer>
+          © {new Date().getFullYear()}, Desenvolvido com
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </div>
     </div>
   )
 }
