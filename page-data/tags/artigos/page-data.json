@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-tags-js","path":"/tags/artigos/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/2020/06/29/"},"frontmatter":{"title":"Leituras mais interessantes da semana (22-28 jun)"}}}]}},"pageContext":{"tag":"artigos"}}}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/artigos/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/2020/06/29/"},"frontmatter":{"title":"Leituras (22-28 jun)"}}}]}},"pageContext":{"tag":"artigos"}}}

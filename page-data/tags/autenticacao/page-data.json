@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-tags-js","path":"/tags/autenticacao/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/2020/07/17/"},"frontmatter":{"title":"O que é JWT?"}}}]}},"pageContext":{"tag":"autenticação"}}}
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/autenticacao/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/2020/07/17/"},"frontmatter":{"title":"JWT, recapitulando conceitos."}}}]}},"pageContext":{"tag":"autenticação"}}}
