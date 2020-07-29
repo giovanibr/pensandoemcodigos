@@ -25,6 +25,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          type='article'
+          location={`https://pensandoemcodigos.net${location.pathname}index.html`}
+          date={post.frontmatter.isoDate}
         />
         <article>
           <header>
@@ -114,6 +117,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "DD/MM/YY")
+        isoDate: date(formatString: "YYYY-MM-DDTHH:mm:ssZ")
         description
       }
     }
