@@ -65,19 +65,18 @@ const Bio = () => {
         }}
       />
       <p>
-        Por <strong>{author.name}</strong>
+        Um blog por <strong>{author.name}</strong>
         {', ' + author.summary}
+        
         {/* <a href={social.twitter}>
             <Icon name="twitter" />
           </a>
         <a href={`https://twitter.com/${social.twitter}`}>
         
         </a> */}
-      </p>
+      </p>      
       
-      
-    </div>
-    
+    </div>    
   )
 }
 
