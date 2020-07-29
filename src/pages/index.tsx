@@ -25,6 +25,7 @@ type Data = {
           title: string
           date: string
           description: string
+          category: string
         }
         fields: {
           slug: string
@@ -40,11 +41,11 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const menuLinks = data.site.siteMetadata.menuLinks
 
   return (
-    <Layout location={location} title={siteTitle} menu={menuLinks}>
+    <Layout location={location} title={siteTitle} >
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
-        // if (node.frontmatter.tag === "post") {
+        // if (node.frontmatter.category === "post") {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug} style={{marginLeft: rhythm(.5)}}>
@@ -69,7 +70,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
             </section>
           </article>
         )
-        //      }
+        // }
       })}
     </Layout>
   )
@@ -84,7 +85,13 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {category: {eq: "post"}}
+      },
+      sort: { 
+        fields: [frontmatter___date], order: DESC 
+      }) {
       edges {
         node {
           excerpt
@@ -95,7 +102,8 @@ export const pageQuery = graphql`
             date(formatString: "DD/MM/YY")
             title
             description
-            tag
+            tags
+            category
           }
         }
       }
