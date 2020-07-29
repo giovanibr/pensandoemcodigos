@@ -2,7 +2,7 @@
 title: "O que é o Deno?"
 date: "2020-06-25"
 description: "O que é o Deno, o novo <i>runtime</i> para Javascript e Typescript?"
-tag: "post"
+category: "post"
 ---
 
 ![deno](deno.png)

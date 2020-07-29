@@ -1,11 +1,12 @@
 ---
-title: "O que é JWT?"
+title: "JWT, recapitulando conceitos."
 date: "2020-07-17"
 description: "O que é JWT ou JSON Web Token? O que é JWS? Conceitos, utilização e vantagens."
+category: "post"
 tags: ["jwt", "autenticação", "autorização"]
 ---
 
-# O que é JWT? #
+## O que é JWT? ##
 
 [Json Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) é uma especificação ([RFC 7519](https://tools.ietf.org/html/rfc7519)) muito popular, que define uma forma compacta, auto-contida e *URL Safe* de transmitir dados de forma segura, usando JSON.
 

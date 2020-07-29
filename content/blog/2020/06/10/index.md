@@ -2,7 +2,7 @@
 title: "Usando o AWS S3 com NodeJS"
 date: "2020-06-10"
 description: "Como fazer upload e download de arquivos na Amazon S3 usando NodeJS."
-tag: "post"
+category: "post"
 ---
 
 ![aws-s3](s3.png)
