@@ -70,7 +70,7 @@ const SEO = ({ description, lang, meta, title, type, location, date }) => {
 
   return (
     <Helmet>
-      <html lang="pt-br" dir="ltr" />
+      <html lang="pt-BR" dir="ltr" />
       <title>{title}</title>
       <meta name="description" content={metaDescription} />
 
