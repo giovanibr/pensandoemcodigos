@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Pensando em Códigos]]></title><description><![CDATA[Um espaço onde vou consolidando antigos e novos conhecimentos em programação: muito javascript, typescript, nodejs, kotlin, spring, etc.]]></description><link>http://pensandoemcodigos.net</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Aug 2020 21:56:56 GMT</lastBuildDate><item><title><![CDATA[Leituras (27-02 ago)]]></title><description><![CDATA[Facebook’s ‘Red Team’ Hacks Its Own AI Programs (Wired): O trabalho de ‘furar’ os cada vez mais complexos filtros de inteligência artificial…]]></description><link>http://pensandoemcodigos.net/2020/08/03/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/08/03/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.wired.com/story/facebooks-red-team-hacks-ai-programs/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Facebook’s ‘Red Team’ Hacks Its Own AI Programs (Wired)&lt;/a&gt;&lt;/strong&gt;: O trabalho de ‘furar’ os cada vez mais complexos filtros de inteligência artificial do Facebook e Instagram (em Ingês).&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Pensando em Códigos]]></title><description><![CDATA[Um espaço onde vou consolidando antigos e novos conhecimentos em programação: muito javascript, typescript, nodejs, kotlin, spring, etc.]]></description><link>http://pensandoemcodigos.net</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Aug 2020 21:40:01 GMT</lastBuildDate><item><title><![CDATA[Delegation Pattern em Kotlin]]></title><description><![CDATA[O que é Delegação? Delegação é um padrão de arquitetura do software orientado a objetos. Seu objetivo é estender a funcionalidade de uma…]]></description><link>http://pensandoemcodigos.net/2020/08/07/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/08/07/</guid><pubDate>Fri, 07 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 200px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e4c60a064b0c9453067b3d7e7e7ae300/0a47e/kotlin.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAD4UlEQVQ4y43Ua0ybVRgH8LdDDd01kYURE4WoySZmuiUuDGNMpiZzi8mcy5TpELewDh29UN7Sy6AX2tIWYZBRF6J8WaKJM1n4NuKHGb8smnkdW4FSWnrBDUGkSFdQOc/f875tgbJpfJKTk/fkPL885zl5j7Ctcxjl3lG80BrCay1hHDeNo16MwqyLkUMTJVN9EgMWK/3tW0cL3vVY8Cr5rMSiT0l8YNFbyBZ8SoZuaa3QJjzUE0AGDa6g5nHSiBFq0Myi39TJsQKeXChjizJWeH9Mjo9uYS16yDpKR0zT6LP00p9tG5H2bKa0d1M+5uOYNx/j3wpB8AewGt3pHcYu5x04bBcp5XwEKVcxzbu3UtqzhVe44V7Mu4Lx9SwoowEozw9i/bk4TrgvYda2A/OOMiRbS2netY3utj2cQ1dhyjWYFP5bMvaAfxDChTBe7OzHZEsF5qzlmLGXY87xOP5wPiqh4CjjKEPXRqmfWWzDMsZnqYc5bAzPnhtAxLIfSUsFppr34HfrTqlSyqKMowydRbynW2Qs5S5S8JtfhfEo8N/kWAjbu75CwPgWZppewS/mlzFleR6/NT9HOTTpeIKh/TFwVMbmXSWKtGdTPibHhSBKu67hO0MdpvSHETO8jtvGVzFp3kc5dMb6DDHP0+CoXUpJtpYpUu6tiuyRhbwo6b6Or/VmTKprENa/i0TjUUwYDlEGfUlCWdq+G/O2J83S/qums+vgyeSm2oqEe2JA68NEnRZBtRoRbS2iDccpvoweoFlzBRsw+iHW33VL++P2PQr9mb/k6myauGDXxvPB0CkHAu+3YPQDEWPqesqg1Rx9E9OG/XRZ9C/ptdOsrWkODk2sQ8pp0ocFuzqeRROCnY/lGKztwJDKiZG6ZpLQEEfD2lO403CUPhM/ZqrGX0nUx4j/20suQxJ2daJdyhMbEqvQuGDLVXrjRA9u1n5IEjrM0eAZERP1KuoTL7Iq0206bRiHpjGKRo6adPEldwb1yZXqEnmVOjQTgvBTzSeUQTsooHIherqJzoufs4PNCXrbHMF7xgipDFFSN8aW0Wyl8tUYdfmVCj9Uf4ofa/ro55N+jJ30kFfsZ5WtMTpoHcMbZ8N0jKM1xvF/Q9skyKRLKHKocP2dy/Q9R4PVvdQiXmHbPRGqdI5inz1EBzh6eAXFGpS5DLMS6pIcszaLflN1BYGqL0hvuMqKO0P0FH/CdrtHaa8zxNGxHIr7oExGRRl1SqiFo8KNI1/yxl9jBT0jVMKfr7L2EdrB0V0crcyg+J+oQz5yreHbJaF3iB7k7+Hm7iEq5mjpCoq9/4WK+ahNnbD/AzYwcJQeQUYwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;kotlin-logo&quot;
+        title=&quot;kotlin-logo&quot;
+        src=&quot;/static/e4c60a064b0c9453067b3d7e7e7ae300/772e8/kotlin.png&quot;
+        srcset=&quot;/static/e4c60a064b0c9453067b3d7e7e7ae300/a1812/kotlin.png 50w,
+/static/e4c60a064b0c9453067b3d7e7e7ae300/7e516/kotlin.png 100w,
+/static/e4c60a064b0c9453067b3d7e7e7ae300/772e8/kotlin.png 200w,
+/static/e4c60a064b0c9453067b3d7e7e7ae300/5a46d/kotlin.png 300w,
+/static/e4c60a064b0c9453067b3d7e7e7ae300/e17e5/kotlin.png 400w,
+/static/e4c60a064b0c9453067b3d7e7e7ae300/0a47e/kotlin.png 600w&quot;
+        sizes=&quot;(max-width: 200px) 100vw, 200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;O que é Delegação?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Delegation_pattern&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;strong&gt;Delegação&lt;/strong&gt;&lt;/a&gt; é um padrão de arquitetura do software orientado a objetos. Seu objetivo é estender a funcionalidade de uma classe delegando essa função para outro objeto que implemente a mesma interface.&lt;/p&gt;
+&lt;!-- Suponha que queremos que uma classe B tenha a funcionalidade da classe A e a condição [is A]() é satisfeita, ou seja, B seja um tipo de A. --&gt;
+&lt;h3&gt;Tipos de delegação&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Explicita - Pode ser implementada com qualquer linguagem&lt;/li&gt;
+&lt;li&gt;Implícita - Usa recursos que a linguagem oferece para implementar a delegação&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Delegação com Kotlin&lt;/h2&gt;
+&lt;p&gt;Kotlin oferece instrumentos nativos para implementar delegação, tanto de classes como de propriedades.&lt;/p&gt;
+&lt;p&gt;Essa característica da linguagem é interessante porque permite estender a funcionalidade da classe de uma forma menos trabalhosa. Não é necessário implementar os métodos das interfaces manualmente.&lt;/p&gt;
+&lt;!-- Outro aspecto importante é que a delegação permite implementar **herança múltipla**. --&gt;
+&lt;h3&gt;A palavra reservada &lt;strong&gt;&lt;em&gt;by&lt;/em&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Kotlin usa a palavra reservada &lt;a href=&quot;https://kotlinlang.org/docs/reference/keyword-reference.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;strong&gt;&lt;em&gt;by&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt; para definir a &lt;strong&gt;classe delegada&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Exemplo de delegação de classe&lt;/h3&gt;
+&lt;p&gt;Para análise e estudo, veremos um exemplo de delegação de classe em Kotlin e em Java implementado de várias formas.&lt;/p&gt;
+&lt;h4&gt;Delegação sem usar &lt;strong&gt;&lt;em&gt;by&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Vamos criar uma uma interface &lt;strong&gt;IFacade&lt;/strong&gt; de uma &lt;a href=&quot;https://en.wikipedia.org/wiki/Facade_pattern&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;fachada&lt;/a&gt;, um data class &lt;strong&gt;Connection&lt;/strong&gt; que contem dados de conexão e uma classe &lt;strong&gt;IntegrationX&lt;/strong&gt; que implementa o método de conexão dessa interface:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; IFacade &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;connection&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Connection&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Connection&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; addr&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;IntegrationX&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;connection&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Connection&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IFacade &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;connection&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Connection&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;connected to &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; connection&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;addr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Abaixo vamos utilizar o padrão de delegação para estender a classe &lt;strong&gt;IntegrationX1&lt;/strong&gt;, sem utilizar os recursos que a linguagem Kotlin nos oferece.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;IntegrationX1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; integrationX&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IFacade&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IFacade &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        integrationX&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Reparem em dois pontos fundamentais:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a classe &lt;strong&gt;delegante (IntegrationX1)&lt;/strong&gt; e a classe &lt;strong&gt;delegada (IntegrationX)&lt;/strong&gt; implementam a mesma interface.&lt;/li&gt;
+&lt;li&gt;a classe &lt;strong&gt;delegante (IntegrationX1)&lt;/strong&gt; faz referencia a classe &lt;strong&gt;delegada (IntegrationX)&lt;/strong&gt;. &lt;/li&gt;
+&lt;li&gt;a classe &lt;strong&gt;delegante (IntegrationX1)&lt;/strong&gt; implementa o método da interface, mas quem executa é a classe &lt;strong&gt;delegada (IntegrationX)&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Como ficaria a implementação em Java&lt;/h4&gt;
+&lt;p&gt;Escrevendo um pouco mais de código, teríamos a mesma classe escrita em Java. Usaremos ela para comparar com o código da nossa próxima classe implementada com a palavra reservada &lt;strong&gt;&lt;em&gt;by&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntegrationX1&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IFacade&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntegrationX&lt;/span&gt; integrationX&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntegrationX1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;IntegrationX&lt;/span&gt; integrationX&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;integrationX &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; integrationX&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;integrationX&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Delegação com &lt;strong&gt;&lt;em&gt;by&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;A classe IntegrationX2 implementa o padrão de delegação utilizando o recurso que a linguagem Kotlin nos oferece. O código fica menor, mais limpo e elegante.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;kotlin&quot;&gt;&lt;pre class=&quot;language-kotlin&quot;&gt;&lt;code class=&quot;language-kotlin&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;IntegrationX2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;connection&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Connection&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; IFacade &lt;span class=&quot;token keyword&quot;&gt;by&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;IntegrationX&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;connection&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ao gerarmos o &lt;em&gt;bytecode&lt;/em&gt; e decompilarmos o código, veremos que a classe gerada se assemelha muito com a classe de exemplo IntegrationX1.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntegrationX2&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IFacade&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;token comment&quot;&gt;// $FF: synthetic field&lt;/span&gt;
+   &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntegrationX&lt;/span&gt; $$delegate_0&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+   &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntegrationX2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@NotNull&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Connection&lt;/span&gt; connection&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token class-name&quot;&gt;Intrinsics&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;checkParameterIsNotNull&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;connection&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;connection&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;$$delegate_0 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IntegrationX&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;connection&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+   &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;$$delegate_0&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;O que o compilador fez foi:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;colocar o delegado &lt;strong&gt;IntegrationX&lt;/strong&gt; em um campo &lt;strong&gt;private final&lt;/strong&gt; da classe delegante &lt;strong&gt;IntegrationX2&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;implementar todos os métodos da interface &lt;strong&gt;IFacade&lt;/strong&gt; chamando o delegado &lt;strong&gt;IntegrationX&lt;/strong&gt; em cada uma.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;Particularmente eu não acho muito intuitivo o código da classe &lt;strong&gt;IntegrationX2&lt;/strong&gt; usando a palavra-chave &lt;strong&gt;by&lt;/strong&gt;, por isso é importante entender qual a intenção e o que está acontecendo por trás.&lt;/p&gt;
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://kotlinlang.org/docs/reference/delegation.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Kotlin Delegation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Leituras (27-02 ago)]]></title><description><![CDATA[Facebook’s ‘Red Team’ Hacks Its Own AI Programs (Wired): O trabalho de ‘furar’ os cada vez mais complexos filtros de inteligência artificial…]]></description><link>http://pensandoemcodigos.net/2020/08/03/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/08/03/</guid><pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.wired.com/story/facebooks-red-team-hacks-ai-programs/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Facebook’s ‘Red Team’ Hacks Its Own AI Programs (Wired)&lt;/a&gt;&lt;/strong&gt;: O trabalho de ‘furar’ os cada vez mais complexos filtros de inteligência artificial do Facebook e Instagram (em Ingês).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://arstechnica.com/information-technology/2020/07/the-rise-and-fall-of-adobe-flash/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;The rise and fall of Adobe Flash (Ars Technica)&lt;/a&gt;&lt;/strong&gt;:
 Uma retrospectiva da tecnologia que definiu uma era, pro bem e pro mal (em Ingês).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://stackoverflow.blog/2020/07/30/java-at-25-features-that-made-an-impact-and-a-look-to-the-future&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Java at 25: Features that made an impact and a look to the future (The Overflow)&lt;/a&gt;&lt;/strong&gt;:  As &lt;em&gt;features&lt;/em&gt; que mais fizeram a diferença em 25 anos de Java (em Ingês).&lt;/p&gt;
@@ -90,9 +205,9 @@ Um pequeno bate-bola com Valeri Karpov sobre MongoDB, Mongoose e sobre a experi�
 &lt;h3&gt;&lt;a href=&quot;https://www.protocol.com/amazon-aws-honeycode-low-code-no-code&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;No code, no problem? AWS wants to sell you a world of prefab software (Protocol)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Amazon entra no mercado de &lt;strong&gt;no code&lt;/strong&gt;.&lt;/p&gt;
 &lt;h3&gt;&lt;a href=&quot;https://www.dtibr.com/post/discrimina%C3%A7%C3%A3o-algor%C3%ADtmica-origens-conceitos-e-perspectivas-regulat%C3%B3rias-parte-1&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Discriminação algorítmica: origens, conceitos e perspectivas regulatórias (parte 1) (DTIBR)&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Artigo conceituando &lt;strong&gt;discriminação algorítmica&lt;/strong&gt;?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[O que é o Deno?]]></title><description><![CDATA[O que é Deno? Deno é o novo projeto do criador do NodeJs. Ryan Dahl vem desde o fim de 2018 trabalhando nesse novo runtime para javascript e…]]></description><link>http://pensandoemcodigos.net/2020/06/25/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/06/25/</guid><pubDate>Thu, 25 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;p&gt;Artigo conceituando &lt;strong&gt;discriminação algorítmica&lt;/strong&gt;?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[O que é o Deno?]]></title><description><![CDATA[Deno é o novo projeto do criador do NodeJs. Ryan Dahl vem desde o fim de 2018 trabalhando nesse novo runtime para javascript e typescript…]]></description><link>http://pensandoemcodigos.net/2020/06/25/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/06/25/</guid><pubDate>Thu, 25 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 200px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -109,20 +224,19 @@ Um pequeno bate-bola com Valeri Karpov sobre MongoDB, Mongoose e sobre a experi�
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;deno&quot;
         title=&quot;deno&quot;
-        src=&quot;/static/e245c027e857e6c66745f4db657ddf76/fcda8/deno.png&quot;
-        srcset=&quot;/static/e245c027e857e6c66745f4db657ddf76/12f09/deno.png 148w,
-/static/e245c027e857e6c66745f4db657ddf76/e4a3f/deno.png 295w,
-/static/e245c027e857e6c66745f4db657ddf76/fcda8/deno.png 590w,
-/static/e245c027e857e6c66745f4db657ddf76/efc66/deno.png 885w,
-/static/e245c027e857e6c66745f4db657ddf76/c83ae/deno.png 1180w,
+        src=&quot;/static/e245c027e857e6c66745f4db657ddf76/772e8/deno.png&quot;
+        srcset=&quot;/static/e245c027e857e6c66745f4db657ddf76/a1812/deno.png 50w,
+/static/e245c027e857e6c66745f4db657ddf76/7e516/deno.png 100w,
+/static/e245c027e857e6c66745f4db657ddf76/772e8/deno.png 200w,
+/static/e245c027e857e6c66745f4db657ddf76/5a46d/deno.png 300w,
+/static/e245c027e857e6c66745f4db657ddf76/e17e5/deno.png 400w,
 /static/e245c027e857e6c66745f4db657ddf76/21b4d/deno.png 1280w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 200px) 100vw, 200px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h2&gt;O que é Deno?&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://deno.land/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Deno&lt;/a&gt; é o novo projeto do criador do &lt;a href=&quot;https://nodejs.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;NodeJs&lt;/a&gt;. &lt;a href=&quot;https://en.wikipedia.org/wiki/Ryan_Dahl&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Ryan Dahl&lt;/a&gt; vem desde o fim de 2018 trabalhando nesse novo &lt;em&gt;runtime&lt;/em&gt; para &lt;strong&gt;javascript&lt;/strong&gt; e &lt;strong&gt;typescript&lt;/strong&gt;, que muitos apontam como o possível sucessor do Node.&lt;/p&gt;
 &lt;h2&gt;Motivação&lt;/h2&gt;
 &lt;p&gt;NodeJs é um projeto lançado em 2009, quando o universo do Javascript era bem diferente. A linguagem javascript mudou muito de lá pra cá, como com a criação de &lt;em&gt;promisses&lt;/em&gt; e &lt;em&gt;async/await&lt;/em&gt;. &lt;a href=&quot;https://pt.wikipedia.org/wiki/TypeScript&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Typescript&lt;/a&gt; então só surgiu em 2012.&lt;/p&gt;
@@ -172,7 +286,7 @@ As bibliotecas baixadas são colocadas em um &lt;strong&gt;cache&lt;/strong&gt; 
 &lt;h3&gt;&lt;a href=&quot;https://braziljournal.com/whatsapp-entra-em-pagamentos-mas-nem-tudo-e-o-que-parece&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Whatsapp entra em pagamentos, mas nem tudo é o que parece (Brazil Journal)&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Whatsapp lança carteira digital no Brasil.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Usando o AWS S3 com NodeJS]]></title><description><![CDATA[Muitas aplicações têm como requisito o armazenamento de arquivos. Podem ser arquivos para download ou a necessidade de gurda de documentos…]]></description><link>http://pensandoemcodigos.net/2020/06/10/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/06/10/</guid><pubDate>Wed, 10 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 259px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 200px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -183,16 +297,18 @@ As bibliotecas baixadas são colocadas em um &lt;strong&gt;cache&lt;/strong&gt; 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAACK0lEQVQoz2P4jwr+/f3778/v///+ff/08fTsyc8WTP/38cNfIPjz5//fv2iKGf5jAJC6//+31pa0ynBfttF601YFMvTfP0yVCM3//oEMvrppzd36kl/7dqxMCmvVlr7ta/uiKPXsmqXbSjLfbVqFZgoDsoOB5MaSzNMW6s/97fc6m3QbqncYqM230GzTkupSEHhckU1A8/baonOups8iPC/72u1zM1tjrz/XUqvbRG2SvsKThlICmrdWF5x1NnoV6bnIWqfNQPFRsPNlP7sOI+WJOrJP64uJ1bzcRrdTX+G2v/1ZH+tOYxWiNAOdfd7N7Fmk5/Ugp5PBLpu8rGdb63Sbqk02UHjaWEpMgKk9C7A/HOB4sijtdnXBLn8HYLB3KfDjDDCgECR67x898GTWxP/XL69MjWrTkLztbf2yNP3uicPHJ3V9OLQHkgr+wVILQjMEgNhgU/Z2N3epil5xNno3qQOiAksigWj4+vXr9evXgYyfP378/vUTaPz3b9+url/5fMPKf79+/PjxHSh188aNS5cu3QYDiH0Mf8FuOH/+fG1t7e7du+fMmbNly5bFixfv2LFj667d2/btX7l69dKlS588ebJv374FCxacOHFiyZIlUM0Qm48ePQpUDVR04cIFIKOzs3PO7NlrV6/evHHDgvnzz5w5A7Tt4sWLQAXbt2/ftWsXip8h9v8BBgYY/Pr16/v37yDnfv/++/dviAU/f/4Ecn+CAUQXAJw30fPn3lg/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 74%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAACK0lEQVQoz2P4jwr+/f3778/v///+ff/08fTsyc8WTP/38cNfIPjz5//fv2iKGf5jAJC6//+31pa0ynBfttF601YFMvTfP0yVCM3//oEMvrppzd36kl/7dqxMCmvVlr7ta/uiKPXsmqXbSjLfbVqFZgoDsoOB5MaSzNMW6s/97fc6m3QbqncYqM230GzTkupSEHhckU1A8/baonOups8iPC/72u1zM1tjrz/XUqvbRG2SvsKThlICmrdWF5x1NnoV6bnIWqfNQPFRsPNlP7sOI+WJOrJP64uJ1bzcRrdTX+G2v/1ZH+tOYxWiNAOdfd7N7Fmk5/Ugp5PBLpu8rGdb63Sbqk02UHjaWEpMgKk9C7A/HOB4sijtdnXBLn8HYLB3KfDjDDCgECR67x898GTWxP/XL69MjWrTkLztbf2yNP3uicPHJ3V9OLQHkgr+wVILQjMEgNhgU/Z2N3epil5xNno3qQOiAksigWj4+vXr9evXgYyfP378/vUTaPz3b9+url/5fMPKf79+/PjxHSh188aNS5cu3QYDiH0Mf8FuOH/+fG1t7e7du+fMmbNly5bFixfv2LFj667d2/btX7l69dKlS588ebJv374FCxacOHFiyZIlUM0Qm48ePQpUDVR04cIFIKOzs3PO7NlrV6/evHHDgvnzz5w5A7Tt4sWLQAXbt2/ftWsXip8h9v8BBgYY/Pr16/v37yDnfv/++/dviAU/f/4Ecn+CAUQXAJw30fPn3lg/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;aws-s3&quot;
         title=&quot;aws-s3&quot;
-        src=&quot;/static/21f429bb78c18fb85431e27731ce306e/a2ead/s3.png&quot;
-        srcset=&quot;/static/21f429bb78c18fb85431e27731ce306e/12f09/s3.png 148w,
+        src=&quot;/static/21f429bb78c18fb85431e27731ce306e/772e8/s3.png&quot;
+        srcset=&quot;/static/21f429bb78c18fb85431e27731ce306e/a1812/s3.png 50w,
+/static/21f429bb78c18fb85431e27731ce306e/7e516/s3.png 100w,
+/static/21f429bb78c18fb85431e27731ce306e/772e8/s3.png 200w,
 /static/21f429bb78c18fb85431e27731ce306e/a2ead/s3.png 259w&quot;
-        sizes=&quot;(max-width: 259px) 100vw, 259px&quot;
+        sizes=&quot;(max-width: 200px) 100vw, 200px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -254,9 +370,9 @@ fileStream&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Projeto Demo&lt;/h2&gt;
 &lt;p&gt;O projeto &lt;a href=&quot;https://github.com/giovanibr/aws-node-demo&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;aws-node-demo&lt;/a&gt; é uma aplicação NodeJS básica com &lt;a href=&quot;https://expressjs.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Express&lt;/a&gt; que disponibiliza 2 endpoints para upload e download na AWS.&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Implementando filas de tarefas com Bull]]></title><description><![CDATA[Um tutorial passando pelos pontos básicos da utilização da biblioteca Bull para gerenciar filas de tarefas assíncronas em aplicações NodeJs…]]></description><link>http://pensandoemcodigos.net/2020/05/31/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/05/31/</guid><pubDate>Sun, 31 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;p&gt; &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Tutorial: Implementando filas de tarefas com Bull]]></title><description><![CDATA[Um tutorial passando pelos pontos básicos da utilização da biblioteca Bull para gerenciar filas de tarefas assíncronas em aplicações NodeJs…]]></description><link>http://pensandoemcodigos.net/2020/05/31/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/05/31/</guid><pubDate>Sun, 31 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 200px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -267,24 +383,25 @@ fileStream&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 33.108108108108105%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABXUlEQVQozz3RzStEURzG8dOMhSws5I5BWdlYc2eMLfKSpY2UwsJCpCilGEamlBWlZgZTGG8LL0WUaCZNZO0fIBayYWFjzP353jNn3Pr0e+Z2znPvmat8TXM9GFDmIvtQ7ubK0JJH39yQEhV3KlRCPPCiDKVmev/vmYJ6VKMVe/jCO7qKD6Gsnw05lXCSWCHvYAtXKi5tTBvnxcJJpH32glQFFoUsbnanFYz06UUJGaf0hnmBW0qPcEx+pLCb2YJssfC5KhgVq3E279OF4UK2I2LZ4VxN3XA7i4cp/AVFso4THOoSXeiEkFEvji688zcvu2/0iRQ+8KNnICL+honVkuhbRG3Kk4rnTwtFzoEpvKew1Rw5XXzDa+wjY34vYRTTlj1/qRclZcQc+bxwZDkzshjiAZ14INe6BVOmaAYxNKMDY/8fJZYfVAcibEqxqVdtu1nWsKtSOrt/xTde/wA7m+RfmknkowAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 34%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABXUlEQVQozz3RzStEURzG8dOMhSws5I5BWdlYc2eMLfKSpY2UwsJCpCilGEamlBWlZgZTGG8LL0WUaCZNZO0fIBayYWFjzP353jNn3Pr0e+Z2znPvmat8TXM9GFDmIvtQ7ubK0JJH39yQEhV3KlRCPPCiDKVmev/vmYJ6VKMVe/jCO7qKD6Gsnw05lXCSWCHvYAtXKi5tTBvnxcJJpH32glQFFoUsbnanFYz06UUJGaf0hnmBW0qPcEx+pLCb2YJssfC5KhgVq3E279OF4UK2I2LZ4VxN3XA7i4cp/AVFso4THOoSXeiEkFEvji688zcvu2/0iRQ+8KNnICL+honVkuhbRG3Kk4rnTwtFzoEpvKew1Rw5XXzDa+wjY34vYRTTlj1/qRclZcQc+bxwZDkzshjiAZ14INe6BVOmaAYxNKMDY/8fJZYfVAcibEqxqVdtu1nWsKtSOrt/xTde/wA7m+RfmknkowAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;bull&quot;
         title=&quot;bull&quot;
-        src=&quot;/static/c24d7a53f1ab2b059a7044d186ef5270/fcda8/bull.png&quot;
-        srcset=&quot;/static/c24d7a53f1ab2b059a7044d186ef5270/12f09/bull.png 148w,
-/static/c24d7a53f1ab2b059a7044d186ef5270/e4a3f/bull.png 295w,
-/static/c24d7a53f1ab2b059a7044d186ef5270/fcda8/bull.png 590w,
+        src=&quot;/static/c24d7a53f1ab2b059a7044d186ef5270/772e8/bull.png&quot;
+        srcset=&quot;/static/c24d7a53f1ab2b059a7044d186ef5270/a1812/bull.png 50w,
+/static/c24d7a53f1ab2b059a7044d186ef5270/7e516/bull.png 100w,
+/static/c24d7a53f1ab2b059a7044d186ef5270/772e8/bull.png 200w,
+/static/c24d7a53f1ab2b059a7044d186ef5270/5a46d/bull.png 300w,
+/static/c24d7a53f1ab2b059a7044d186ef5270/e17e5/bull.png 400w,
 /static/c24d7a53f1ab2b059a7044d186ef5270/0a47e/bull.png 600w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 200px) 100vw, 200px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
 &lt;p&gt;Um tutorial passando pelos pontos básicos da utilização da biblioteca &lt;a href=&quot;https://github.com/OptimalBits/bull&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Bull&lt;/a&gt; para gerenciar filas de tarefas assíncronas em aplicações &lt;a href=&quot;https://nodejs.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;NodeJs&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;O que é Bull?&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/OptimalBits/bull&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Bull&lt;/a&gt; é uma biblioteca NodeJS que implementa um rápido e confiável gerenciador de filas de tarefas (&lt;em&gt;job&lt;/em&gt;).&lt;/p&gt;
@@ -379,9 +496,13 @@ minhaFila&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Projeto Demo&lt;/h2&gt;
 &lt;p&gt;O projeto &lt;a href=&quot;https://github.com/giovanibr/bull-demo&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;bull-demo&lt;/a&gt; está funcional e imprime no console todos as etapas do ciclo de vida da tarefa. Ele é uma aplicação NodeJS básica com &lt;a href=&quot;https://expressjs.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Express&lt;/a&gt; com um endpoint POST, que recebe os dados da tarefa e coloca na fila.&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Funções em Javascript: entidades de primeira classe]]></title><description><![CDATA[Em linguagens de programação, define-se uma entidade de primeira classe (first-class citizens) como a entidade em que é permitido realizar…]]></description><link>http://pensandoemcodigos.net/2020/05/18/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/05/18/</guid><pubDate>Mon, 18 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://optimalbits.github.io/bull/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Bull’s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/OptimalBits/bull&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Bull’s Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Funções em Javascript: entidades de primeira classe]]></title><description><![CDATA[Em linguagens de programação, define-se uma entidade de primeira classe (first-class citizens) como a entidade em que é permitido realizar…]]></description><link>http://pensandoemcodigos.net/2020/05/18/</link><guid isPermaLink="false">http://pensandoemcodigos.net/2020/05/18/</guid><pubDate>Mon, 18 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 200px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -392,18 +513,20 @@ minhaFila&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 35.13513513513513%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAAAq0lEQVQY02N4/b8GK3oDQrVv/9d+/F//BocaBlw6n/+ufvyt8tGXipM38579rHpDpOZX/2o+/K+7/KRo+ZaEeStjVu9IevilAugEoDgxmqu//G+4+axk6eb4EzfzFq6Nvf229B0xmoEqgOpuvSldvzd5xZaEm69LwZYnfv3f8PJvNVGa77wr23QgFejn49dztx9Ne/aLaD8DEVA/0OVAfwI9//l/AzDYsSoDABh0RmcopNcOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 36%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAAAq0lEQVQY02N4/b8GK3oDQrVv/9d+/F//BocaBlw6n/+ufvyt8tGXipM38579rHpDpOZX/2o+/K+7/KRo+ZaEeStjVu9IevilAugEoDgxmqu//G+4+axk6eb4EzfzFq6Nvf229B0xmoEqgOpuvSldvzd5xZaEm69LwZYnfv3f8PJvNVGa77wr23QgFejn49dztx9Ne/aLaD8DEVA/0OVAfwI9//l/AzDYsSoDABh0RmcopNcOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;js&quot;
         title=&quot;js&quot;
-        src=&quot;/static/b914ee62e5d19e111adf39f2f0c64b27/fcda8/js.png&quot;
-        srcset=&quot;/static/b914ee62e5d19e111adf39f2f0c64b27/12f09/js.png 148w,
-/static/b914ee62e5d19e111adf39f2f0c64b27/e4a3f/js.png 295w,
-/static/b914ee62e5d19e111adf39f2f0c64b27/fcda8/js.png 590w,
+        src=&quot;/static/b914ee62e5d19e111adf39f2f0c64b27/772e8/js.png&quot;
+        srcset=&quot;/static/b914ee62e5d19e111adf39f2f0c64b27/a1812/js.png 50w,
+/static/b914ee62e5d19e111adf39f2f0c64b27/7e516/js.png 100w,
+/static/b914ee62e5d19e111adf39f2f0c64b27/772e8/js.png 200w,
+/static/b914ee62e5d19e111adf39f2f0c64b27/5a46d/js.png 300w,
+/static/b914ee62e5d19e111adf39f2f0c64b27/e17e5/js.png 400w,
 /static/b914ee62e5d19e111adf39f2f0c64b27/9c177/js.png 880w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 200px) 100vw, 200px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
