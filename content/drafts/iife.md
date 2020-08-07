@@ -7,7 +7,7 @@ tags: ["javascript", "designpattern"]
 
 # IIFE #
 
-Ao executar uma função em javascript, um novo **escopo de execução** é criado. Todas as variaveis e funções criadas dentro da função não estão acessíveis fora desse contexto. Ou seja, criar uma função é a maneira mais fácil de criar **privacidade**.
+Ao executar uma função em javascript, um novo **escopo de execução** é criado. Todas as variáveis e funções criadas dentro da função não estão acessíveis fora desse contexto. Ou seja, criar uma função é a maneira mais fácil de criar **privacidade**.
 
 ## Declaração ##
 

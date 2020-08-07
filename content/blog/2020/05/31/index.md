@@ -1,5 +1,5 @@
 ---
-title: "Implementando filas de tarefas com Bull"
+title: "Tutorial: Implementando filas de tarefas com Bull"
 date: "2020-05-31"
 description: "Gerenciando filas assíncronas em projetos NodeJS com Bull."
 category: "post"
@@ -7,8 +7,6 @@ tags: ["js", "bull", "queue"]
 ---
 
 ![bull](bull.png)
-
-&nbsp;
 
 Um tutorial passando pelos pontos básicos da utilização da biblioteca [Bull](https://github.com/OptimalBits/bull) para gerenciar filas de tarefas assíncronas em aplicações [NodeJs](https://nodejs.org/).
 
@@ -144,4 +142,7 @@ minhaFila.on('failed', function(job, error){
 
 O projeto [bull-demo](https://github.com/giovanibr/bull-demo) está funcional e imprime no console todos as etapas do ciclo de vida da tarefa. Ele é uma aplicação NodeJS básica com [Express](https://expressjs.com/) com um endpoint POST, que recebe os dados da tarefa e coloca na fila.
 
-&nbsp;
+## Referências ##
+- [Bull's Guide](https://optimalbits.github.io/bull/)
+- [Bull's Github](https://github.com/OptimalBits/bull)
+

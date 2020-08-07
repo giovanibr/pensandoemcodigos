@@ -7,7 +7,6 @@ category: "post"
 
 ![deno](deno.png)
 
-## O que é Deno? ##
 [Deno](https://deno.land/) é o novo projeto do criador do [NodeJs](https://nodejs.org/). [Ryan Dahl](https://en.wikipedia.org/wiki/Ryan_Dahl) vem desde o fim de 2018 trabalhando nesse novo *runtime* para **javascript** e **typescript**, que muitos apontam como o possível sucessor do Node.
 
 ## Motivação ##
